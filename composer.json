@@ -1,0 +1,32 @@
+{
+    "name": "sshgun/wallforms",
+    "description": "Another form library for php",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "sshgun",
+            "email": "g3devmain@gmail.com"
+        }
+    ],
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wallforms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "require": {
+        "vlucas/valitron": "^1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    }
+}
