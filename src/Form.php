@@ -39,7 +39,8 @@ abstract class Form
     {
         foreach ($this->fields() as $key => $field) {
             $data_key = is_int($key) ? $field : $key;
-            if ($value = $this->getDataValue($data, $data_key)) {
+            $value = $this->getDataValue($data, $data_key);
+            if (!is_null($value)) {
                 $this->raw_values[$data_key] = $value;
             }
         }
@@ -83,4 +84,3 @@ abstract class Form
         return $this->validator->getErrors();
     }
 }
-
